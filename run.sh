@@ -7,4 +7,4 @@ if [[ ! -e .bundle ]]; then
 fi
 cp config .bundle
 
-bundle install --local && cucumber features
+bin/cucumber features
