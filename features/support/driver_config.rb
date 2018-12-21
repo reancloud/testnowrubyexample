@@ -61,9 +61,13 @@ end
 def launch_driver_ie
   client = Selenium::WebDriver::Remote::Http::Default.new
   client.timeout = 120
-  caps = Selenium::WebDriver::Remote::Capabilities.ie('ie.ensureCleanSession' => true, :javascript_enabled => true,  :native_events => false, :acceptSslCerts => true)
+service = Selenium::WebDriver::Chrome::Service.new("C:\\IEDriverServer", 5555)
+  service.start
+  sleep(30)
+
+  caps = Selenium::WebDriver::Remote::Capabilities.ie('ie.ensureCleanSession' => true, :javascript_enabled => true,  :native_events => false, :acceptSslCerts => true, :'ignoreProtectedModeSettings' => true)
   @driver = Selenium::WebDriver.for(:remote, :http_client => client, :url => "http://localhost:5555", :desired_capabilities => caps)
-  @driver.manage.timeouts.implicit_wait = 90
+  @driver.manage.timeouts.implicit_wait = 120
   @driver.manage.timeouts.page_load = 120
   @driver.manage.window.size = Selenium::WebDriver::Dimension.new(1366,768)
   #if ENV['RESOLUTION'].nil?
