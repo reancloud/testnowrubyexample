@@ -19,13 +19,13 @@ When /^I click the (register|save|subscribe) button$/ do |button|
   case button
     when "register"
       login = LoginPage.new(@driver)
-      login.register_button.click
-    when "save"
+      @driver.find_element(css: "button[title*='Register']").click
+    when "save" 
       dash = DashboardPage.new(@driver)
-      dash.save_button.click
-    when "subscribe"
+      @driver.find_element(css: "button[title*='Save']").click
+    when "subscribe"  
       dash = DashboardPage.new(@driver)
-      dash.subscribe_button.click
+      @driver.find_element(css: "button[title*='Subscribe']").click
   end
 end
 
