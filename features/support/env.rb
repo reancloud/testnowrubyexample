@@ -8,9 +8,8 @@ require 'rspec'
 require 'selenium-webdriver'
 require 'cucumber'
 require 'rake'
-require 'faker'
-require 'page-object'
 require 'json'
+require 'faker'
 
 include RSpec::Matchers
 

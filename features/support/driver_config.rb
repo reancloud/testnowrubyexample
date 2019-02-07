@@ -41,7 +41,9 @@ def launch_driver_chrome
   @driver = Selenium::WebDriver.for :chrome
   @driver.manage.timeouts.implicit_wait = 30
   #@driver.manage.timeouts.page_load = 120
-  @driver.manage.window.maximize
+  #@driver.manage.window.maximize
+  target_size = Selenium::WebDriver::Dimension.new(1024, 768)
+  @driver.manage.window.size = target_size
 end
 
 #Device
