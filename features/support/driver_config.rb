@@ -26,7 +26,9 @@ def launch_driver_firefox
     profile['extensions.firebug.netexport.jsonpCallback'] = "jsonCallback";
     @driver = Selenium::WebDriver.for :firefox, :profile => profile
   else
-    @driver = Selenium::WebDriver.for :firefox
+  caps = Selenium::WebDriver::Remote::Capabilities.firefox
+  caps['acceptInsecureCerts'] = true
+  @driver = Selenium::WebDriver.for(:firefox, desired_capabilities: caps)
   end
   @driver.manage.timeouts.implicit_wait = 30
   #@driver.manage.timeouts.page_load = 120
@@ -39,7 +41,9 @@ def launch_driver_chrome
   @driver = Selenium::WebDriver.for :chrome
   @driver.manage.timeouts.implicit_wait = 30
   #@driver.manage.timeouts.page_load = 120
-  @driver.manage.window.maximize
+  #@driver.manage.window.maximize
+  target_size = Selenium::WebDriver::Dimension.new(1024, 768)
+  @driver.manage.window.size = target_size
 end
 
 #Device

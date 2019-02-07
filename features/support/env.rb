@@ -8,13 +8,12 @@ require 'rspec'
 require 'selenium-webdriver'
 require 'cucumber'
 require 'rake'
-require 'faker'
-require 'selenium_fury'
 require 'json'
+require 'faker'
 
 include RSpec::Matchers
 
-include SeleniumFury::SeleniumWebDriver::CreateSeleniumWebDriver
+#include SeleniumFury::SeleniumWebDriver::CreateSeleniumWebDriver
 
 require File.dirname(__FILE__) + "/../support/driver_config"
 require File.dirname(__FILE__) + "/../support/utilities"

@@ -11,9 +11,9 @@ end
 When /^I (de-select|select) General Subscription option$/ do |action|
   dash = DashboardPage.new(@driver)
   if action == "select"
-    checkbox_check(dash.general_subscription_checkbox)
+    checkbox_check(@driver.find_element(id: "subscription"))
   elsif action == "de-select"
-    checkbox_uncheck(dash.general_subscription_checkbox)
+    checkbox_uncheck(@driver.find_element(id: "subscription"))
   end
 end
 
@@ -33,9 +33,9 @@ end
 
 Given /^I enter a (fresh|registered) email id in newsletter subscriprion box$/ do |fresh_or_used|
   dash = DashboardPage.new(@driver)
-  if fresh_or_used == "fresh"
-    dash.newsletter_subscription_textbox.send_keys(Faker::Internet.email)
+  if fresh_or_used == "fresh" 
+    @driver.find_element(id: "newsletter").send_keys(Faker::Internet.email)
   elsif fresh_or_used == "registered"
-    dash.newsletter_subscription_textbox.send_keys("admin@mailinator.com")
+    @driver.find_element(id: "newsletter").send_keys("admin@mailinator.com")
   end
 end

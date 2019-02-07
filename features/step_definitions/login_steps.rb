@@ -24,7 +24,8 @@ Then /^I should see ([^"]*) message for (login|registration)$/ do |type,action|
   if action == "login"
     case type
       when "invalid_credentials"
-        magento.error_message.text.should == "Invalid login or password."
+        @driver.find_element(css: "li.error-msg span").text.should == "Invalid login or password."
+        #magento.error_message.text.should == "Invalid login or password."
       when "mandatory_fields"
         sleep(1)
         magento.verify_mandatory_fields_message(action)
@@ -36,9 +37,9 @@ Then /^I should see ([^"]*) message for (login|registration)$/ do |type,action|
         sleep(1)
         magento.verify_mandatory_fields_message(action)
       when "existing_user"
-        magento.error_message.text.should == "There is already an account with this email address. If you are sure that it is your email address, click here to get your password and access your account."
+        @driver.find_element(css: "li.error-msg span").text.should == "There is already an account with this email address. If you are sure that it is your email address, click here to get your password and access your account."
       when "new_user"
-        magento.success_message.text.should == "Thank you for registering with Main Website Store."
+        @driver.find_element(css: "li.success-msg span").text.should == "Thank you for registering with Main Website Store."
     end
   end
 
@@ -46,12 +47,12 @@ end
 
 Given /^I follow (login|register) link in account section$/ do |link|
   magento = LoginPage.new(@driver)
-  magento.account_section.click
+  @driver.find_element(css: "a.skip-account").click
   case link
     when "login"
-      magento.login_link.click
+      @driver.find_element(xpath: "/html/body/div/div/header/div/div[5]/div/ul/li[6]/a").click
     when "register"
-      magento.register_link.click
+      @driver.find_element(css: "a[title*='Register']").click
   end
 end
 
