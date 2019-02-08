@@ -61,7 +61,6 @@ end
 
 Then /^I place the order$/ do
   checkout = CheckoutPage.new(@driver)
-  @driver.find_element(css: "button.btn-checkout").click
   Selenium::WebDriver::Wait.new(timeout: 60).until {@driver.find_element(css: "button.btn-checkout").displayed?}
   @driver.find_element(css: "button.btn-checkout").click
 end 
