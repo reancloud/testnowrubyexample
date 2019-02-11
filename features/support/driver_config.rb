@@ -65,7 +65,7 @@ end
 def launch_driver_ie
   client = Selenium::WebDriver::Remote::Http::Default.new
   client.timeout = 120
-service = Selenium::WebDriver::Chrome::Service.new("C:\\IEDriverServer", 5555)
+service = Selenium::WebDriver::Chrome::Service.new("C:\\IEDriverServer\\IEDriverServer.exe", 5555)
   service.start
   sleep(30)
 
