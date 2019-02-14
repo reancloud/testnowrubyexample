@@ -1,7 +1,7 @@
-# :sparkles: TESTNOW RUBY EXAMPLE :sparkles:
+## REAN Test - RUBY EXAMPLE 
 Contains cucumber features for very famous magento web application.
 
-## Overview :eyes:
+## Overview 
 
 Behavior Driven scenarios written in Cucumber for Magento web application.
 
@@ -17,23 +17,23 @@ This suite runs scenarios related to following:
 2. Buying of a product with different checkout methods
 3. Newsletter subscriptions
 
-##Purpose :eyes:
+## Purpose 
 
-Major purpose of this example automation is to understand how one can make maximum usage of [TestNow](https://opexsoftware/testnow) cross browser testing with minimum effort by following some best practices mentioned here. 
+Major purpose of this example automation is to understand how one can make maximum usage of [REANTest](https://rean-platform.reancloud.com/reantest#/dashboard/home) cross browser testing with minimum effort by following some best practices mentioned here. 
 Few Best Practices are as follows:
 
 1. How to initialize different browsers
 2. How to write appropriate setup and teardown's
 3. How to take failed scenario screenshots
-4. How to create json and html reports which helps TestNow to create consolidated reports for you.
+4. How to create json and html reports which helps REAN Test to create consolidated reports for you.
 5. How to organize code in case of Ruby Cucumber setup
 6. and few more which you can relate to ... :)
 
-## Application Under Test (AUT) :eyes:
+## Application Under Test (AUT) 
 
 __Magento__ is an ecommerce platform built on open source technology which provides online merchants with a flexible shopping cart system, as well as control over the look, content and functionality of their online store. Magento offers powerful marketing, search engine optimization, and catalog-management tools.
 
-##How To Use This For Your Application :eyes:
+## How To Use This For Your Application 
 
 Before you fork or borrow ideas from this example project, it might be useful to know some do's and dont's which will enable you to implement this awesome framework for your project hassle free.
 
@@ -64,10 +64,10 @@ __Dont's__
 2. Do not delete Gemfile or else all gem installations will have to be done manually and bundle install command will not work.
 
 
-## Requirements :eyes:
+## Requirements 
 
 1. __Code__
-  * TESTNOW RUBY EXAMPLE code 
+  * REAN Test - RUBY EXAMPLE code 
 2. __Programming Language__
   * Ruby
 3. __Gems__
@@ -79,14 +79,14 @@ __Dont's__
   * Internet Explorer
   * Opera
 
-## Setup :eyes:
+## Setup 
 
-1. __git clone https://github.com/opexsw/testnowrubyexample.git__
-2. __bundle install (this will install all dependencies for running TESTNOW RUBY EXAMPLE)__
+1. __git clone https://github.com/reancloud/testnowrubyexample.git__
+2. __bundle install (this will install all dependencies for running REAN Test RUBY EXAMPLE)__
 
-####NOTE: To avoid all the requirement and setup related extra work, use [TESTNOW](https://opexsoftware.com/testnow) :star2:
+#### NOTE: To avoid all the requirement and setup related extra work, use [REANTest](https://rean-platform.reancloud.com/reantest#/dashboard/home) 
 
-## Execution :eyes:
+## Execution
 
 __Commmands__ 
 
@@ -94,7 +94,7 @@ __Commmands__
 2. __cucumber features/scenarios/login.feature__ : This will only execute the scenarios in login feature file
 3. __cucumber features/scenarios/login.feature:10__ : This will run only 1 scenario which has line number 10 in it from login.feature file
 
-## Reporting :eyes:
+## Reporting 
 Magento automation reports are created in following 2 types of format
 
 1. __HTML__ : magento_report.html
@@ -102,11 +102,3 @@ Magento automation reports are created in following 2 types of format
 
 Reports are created inside the Reports directory with above mentioned filenames
 
-##Author :eyes:
-
-* Name: __Kaushal Rupani__ :sunglasses:
-* Organization: __Opex Software__ :star:
-* Email: __kaushal.rupani@opexsoftware.com__
-
-##Licence :eyes:
-For Licence information, see [here](https://github.com/opexsw/testnowrubyexample/blob/master/LICENSE.txt)
