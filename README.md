@@ -1,4 +1,4 @@
-TESTNOW RUBY EXAMPLE 
+## REAN Test - RUBY EXAMPLE 
 Contains cucumber features for very famous magento web application.
 
 ## Overview 
@@ -17,15 +17,15 @@ This suite runs scenarios related to following:
 2. Buying of a product with different checkout methods
 3. Newsletter subscriptions
 
-##Purpose 
+## Purpose 
 
-Major purpose of this example automation is to understand how one can make maximum usage of [TestNow](https://opexsoftware/testnow) cross browser testing with minimum effort by following some best practices mentioned here. 
+Major purpose of this example automation is to understand how one can make maximum usage of [REANTest](https://rean-platform.reancloud.com/reantest#/dashboard/home) cross browser testing with minimum effort by following some best practices mentioned here. 
 Few Best Practices are as follows:
 
 1. How to initialize different browsers
 2. How to write appropriate setup and teardown's
 3. How to take failed scenario screenshots
-4. How to create json and html reports which helps TestNow to create consolidated reports for you.
+4. How to create json and html reports which helps REAN Test to create consolidated reports for you.
 5. How to organize code in case of Ruby Cucumber setup
 6. and few more which you can relate to ... :)
 
@@ -33,7 +33,7 @@ Few Best Practices are as follows:
 
 __Magento__ is an ecommerce platform built on open source technology which provides online merchants with a flexible shopping cart system, as well as control over the look, content and functionality of their online store. Magento offers powerful marketing, search engine optimization, and catalog-management tools.
 
-##How To Use This For Your Application 
+## How To Use This For Your Application 
 
 Before you fork or borrow ideas from this example project, it might be useful to know some do's and dont's which will enable you to implement this awesome framework for your project hassle free.
 
@@ -67,7 +67,7 @@ __Dont's__
 ## Requirements 
 
 1. __Code__
-  * TESTNOW RUBY EXAMPLE code 
+  * REAN Test - RUBY EXAMPLE code 
 2. __Programming Language__
   * Ruby
 3. __Gems__
@@ -82,9 +82,9 @@ __Dont's__
 ## Setup 
 
 1. __git clone https://github.com/reancloud/testnowrubyexample.git__
-2. __bundle install (this will install all dependencies for running TESTNOW RUBY EXAMPLE)__
+2. __bundle install (this will install all dependencies for running REAN Test RUBY EXAMPLE)__
 
-####NOTE: To avoid all the requirement and setup related extra work, use [TESTNOW](https://opexsoftware.com/testnow) :star2:
+#### NOTE: To avoid all the requirement and setup related extra work, use [REANTest](https://rean-platform.reancloud.com/reantest#/dashboard/home) 
 
 ## Execution
 
