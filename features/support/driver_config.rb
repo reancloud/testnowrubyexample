@@ -28,7 +28,7 @@ def launch_driver_firefox
   else
   caps = Selenium::WebDriver::Remote::Capabilities.firefox
   caps['acceptInsecureCerts'] = true
-  @driver = Selenium::WebDriver.for(:firefox, desired_capabilities: caps)
+  @driver = Selenium::WebDriver.for(:firefox, desired_capabilities: caps, port: 5555)
   end
   @driver.manage.timeouts.implicit_wait = 30
   #@driver.manage.timeouts.page_load = 120
