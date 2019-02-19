@@ -28,7 +28,7 @@ def launch_driver_firefox
   else
   caps = Selenium::WebDriver::Remote::Capabilities.firefox
   caps['acceptInsecureCerts'] = true
-  @driver = Selenium::WebDriver.for(:firefox, desired_capabilities: caps)
+  @driver = Selenium::WebDriver.for(:firefox, desired_capabilities: caps, port: 5555)
   end
   @driver.manage.timeouts.implicit_wait = 30
   #@driver.manage.timeouts.page_load = 120
@@ -65,7 +65,7 @@ end
 def launch_driver_ie
   client = Selenium::WebDriver::Remote::Http::Default.new
   client.timeout = 120
-service = Selenium::WebDriver::Chrome::Service.new("C:\\IEDriverServer", 5555)
+service = Selenium::WebDriver::Chrome::Service.new("C:\\IEDriverServer\\IEDriverServer.exe", 5555)
   service.start
   sleep(30)
 
