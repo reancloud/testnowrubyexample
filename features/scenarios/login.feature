@@ -1,5 +1,5 @@
 # Name: login.feature
-# Copyright 2015, Opex Software
+# Copyright 2020, Hitachi Vantara Corporation
 # Apache License, Version 2.0
 # This is a cucumber feature file containing scenarios in GWT format
 
