@@ -1,3 +1,9 @@
+begin
+  load 'pipeline-tasks/rake/artifact/source.rake'
+rescue LoadError
+  nil
+end
+
 require 'rubygems'
 require 'bundler'
 require 'bundler/setup'
