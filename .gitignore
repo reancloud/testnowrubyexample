@@ -4,7 +4,6 @@
 .config
 .yardoc
 .idea/
-Gemfile.lock
 results.html
 InstalledFiles
 _yardoc
@@ -17,3 +16,4 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+target/
